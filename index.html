@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Predictor de dígitos</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Predictor de dígitos (pizarrita)</h1>
+    <div class="canvas-wrap">
+      <canvas id="draw-canvas" width="280" height="280"></canvas>
+      <div class="controls">
+        <button id="clear-btn">Limpiar</button>
+        <button id="predict-btn">Predecir</button>
+        <label>
+          <input type="checkbox" id="auto-predict" /> Predecir al soltar
+        </label>
+      </div>
+    </div>
+
+    <div id="output">
+      <h2>Predicción</h2>
+      <div id="pred-list">Cargando modelo...</div>
+    </div>
+
+    <p class="notes">Modelo: <code>model/model.json</code> (pon aquí tu model.json y .bin)</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
